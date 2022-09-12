@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "yBqhY9bD+6+qimnrao2hB1T9hYe+cWrAaQvGYwYUtLVgt2eNQx+vjBjNwdXRu+gDJ0MTH2eVYyj3uUjb4fmqyw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lehad\\source\\repos\\CircuitClinical\\CircuitClinical-Backend\\CircuitClinical-Backend.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lehad\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\lehad\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\lehad\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\lehad\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\lehad\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\lehad\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

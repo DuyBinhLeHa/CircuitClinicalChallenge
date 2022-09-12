@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bgivggglQo96dgUhGxxd30fBS7qWCLRO/a3et2dQ6CY=",
+  "Source": "CircuitClinical-Backend",
+  "BasePath": "_content/CircuitClinical-Backend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

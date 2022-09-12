@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "circuitclinical", "CircuitClinical\circuitclinical.esproj", "{0B5980CA-A0AF-4191-8E0C-9FF1323C5108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircuitClinical-Backend", "CircuitClinical-Backend\CircuitClinical-Backend.csproj", "{7C7250A0-24FA-400D-8C84-447492ADEA05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B5980CA-A0AF-4191-8E0C-9FF1323C5108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B5980CA-A0AF-4191-8E0C-9FF1323C5108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B5980CA-A0AF-4191-8E0C-9FF1323C5108}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0B5980CA-A0AF-4191-8E0C-9FF1323C5108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B5980CA-A0AF-4191-8E0C-9FF1323C5108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B5980CA-A0AF-4191-8E0C-9FF1323C5108}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7C7250A0-24FA-400D-8C84-447492ADEA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C7250A0-24FA-400D-8C84-447492ADEA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C7250A0-24FA-400D-8C84-447492ADEA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C7250A0-24FA-400D-8C84-447492ADEA05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD17B97C-AD4C-4C6B-99E4-A46EBFF9E0A9}
+	EndGlobalSection
+EndGlobal

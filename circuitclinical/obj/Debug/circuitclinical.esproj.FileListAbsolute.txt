@@ -1,0 +1,2 @@
+C:\Users\lehad\source\repos\CircuitClinical\CircuitClinical\obj\Debug\circuitclinical.esproj.SuggestedBindingRedirects.cache
+C:\Users\lehad\source\repos\CircuitClinical\CircuitClinical\obj\Debug\circuitclinical.esproj.CoreCompileInputs.cache
