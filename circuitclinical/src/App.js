@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default class App extends Component {
     static displayName = App.name;
@@ -44,9 +46,13 @@ export default class App extends Component {
 
         return (
             <div>
-                <h1 id="tabelLabel" >Weather forecast</h1>
-                <p>This component demonstrates fetching data from the server.</p>
-                {contents}
+                <Fragment>
+                    <Header />
+                    <h1 id="tabelLabel" >Weather forecast</h1>
+                    <p>This component demonstrates fetching data from the server.</p>
+                    {contents}
+                    <Footer />
+                </Fragment>
             </div>
         );
     }
