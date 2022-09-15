@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Detail from './components/Detail';
 
 export default class App extends Component {
     static displayName = App.name;
@@ -40,17 +41,11 @@ export default class App extends Component {
     }
 
     render() {
-        let contents = this.state.loading
-            ? <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
-            : App.renderForecastsTable(this.state.forecasts);
-
         return (
             <div>
                 <Fragment>
                     <Header />
-                    <h1 id="tabelLabel" >Weather forecast</h1>
-                    <p>This component demonstrates fetching data from the server.</p>
-                    {contents}
+                    <Detail />                
                     <Footer />
                 </Fragment>
             </div>

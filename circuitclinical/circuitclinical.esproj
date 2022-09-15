@@ -12,6 +12,7 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\build</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="src\components\" />
+    <Folder Include="src\components\features\" />
+    <Folder Include="src\constants\" />
   </ItemGroup>
 </Project>
