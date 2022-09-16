@@ -1,12 +1,12 @@
 ﻿const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const context = [
-    "/weatherforecast"
+    "api/StudyField/Get"
 ];
 
 module.exports = function (app) {
     const appProxy = createProxyMiddleware(context, {
-        target: 'https://localhost:7013',
+        target: 'https://localhost:44304/',
         secure: false
     });
 

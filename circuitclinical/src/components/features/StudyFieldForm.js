@@ -26,7 +26,7 @@ class StudyFieldForm extends Component {
 
     submitNew = e => {
         e.preventDefault();
-        fetch(`${USERS_API_URL}`, {
+        fetch(`${USERS_API_URL}/Insert`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ class StudyFieldForm extends Component {
 
     submitEdit = e => {
         e.preventDefault();
-        fetch(`${USERS_API_URL}/${this.state.id}`, {
+        fetch(`${USERS_API_URL}/Update/${this.state.id}`, {
             method: 'put',
             headers: {
                 'Content-Type': 'application/json'

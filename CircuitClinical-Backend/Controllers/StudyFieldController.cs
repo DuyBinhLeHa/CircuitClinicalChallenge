@@ -2,10 +2,12 @@
 using CircuitClinical_Backend.Models.Entities;
 using CircuitClinical_Backend.Models.Responses;
 using CircuitClinical_Backend.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CircuitClinical_Backend.Controllers
 {
+    [EnableCors("_myAllowSpecificOrigins")]
     [ApiController]
     [Route("api/[controller]/[action]")]
     public class StudyFieldController : ControllerBase
@@ -24,6 +26,13 @@ namespace CircuitClinical_Backend.Controllers
         {
             StudyFieldsResponseClass studyFieldsResponse = await _studyFieldService.Search("covid", 1, 50);
             return studyFieldsResponse.StudyFieldsResponse.StudyFields;
+        }
+
+        [HttpGet(Name = "GetStudyFieldAll")]
+        public async Task<IEnumerable<StudyField>> GetAll()
+        {
+            var studyFields = await _dBStudyFieldServices.GetAsync();
+            return studyFields;
         }
 
         [HttpGet(Name = "GetStudyFieldById/{id:length(24)}")]

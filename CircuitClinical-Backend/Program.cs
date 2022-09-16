@@ -2,7 +2,18 @@ using CircuitClinical_Backend.DBServices;
 using CircuitClinical_Backend.Services;
 using CircuitClinical_Backend.Utils;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("https://localhost:3000", "https://localhost:44304/").AllowAnyHeader().AllowAnyMethod();
+                      });
+});
 
 builder.Services.Configure<ClinicaltrialDatabaseSetting>(builder.Configuration.GetSection("ClinicaltrialDatabase"));
 
@@ -19,6 +30,8 @@ builder.Services.AddSingleton<DBStudyFieldServices, DBStudyFieldServices>();
 builder.Services.AddSingleton<StudyFieldService, StudyFieldService>();
 
 var app = builder.Build();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

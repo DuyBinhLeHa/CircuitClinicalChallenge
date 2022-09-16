@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Table, Button } from 'reactstrap';
 import StudyFieldModal from './StudyFieldModal';
 
-import { USERS_API_URL } from '../../constants';
+import { API_URL } from '../../constants';
 
 class StudyFieldData extends Component {
 
@@ -10,7 +10,7 @@ class StudyFieldData extends Component {
         let confirmDeletion = window.confirm('Do you really wish to delete it?');
 
         if (confirmDeletion) {
-            fetch(`${USERS_API_URL}/${id}`, {
+            fetch(`${API_URL}/Delete/${id}`, {
                 method: 'delete',
                 headers: {
                     'Content-Type': 'application/json'

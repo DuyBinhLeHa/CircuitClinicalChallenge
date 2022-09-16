@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'reactstrap';
 import StudyFieldData from './features/StudyFieldData';
 import StudyFieldModal from './features/StudyFieldModal';
 
-import { USERS_API_URL } from '../constants';
+import { API_URL } from '../constants';
 
 class Detail extends Component {
 
@@ -15,11 +15,11 @@ class Detail extends Component {
         this.getItems();
     }
 
-    getItems = () => {
-        fetch('https://localhost:44304/api/StudyField/Get')
-            .then(res => res.json())
-            .then(res => this.setState({ items: res }))
-            .catch(err => console.log(err));
+    async getItems() {
+        const response = await fetch(`${API_URL}/StudyField/GetAll`);
+        const data = await response.json();
+        console.log(data);
+        this.setState({ items: data });
     }
 
     addUserToState = user => {

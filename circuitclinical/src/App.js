@@ -12,7 +12,7 @@ export default class App extends Component {
     }
 
     componentDidMount() {
-        this.populateWeatherData();
+        // this.populateWeatherData();
     }
 
     static renderForecastsTable(forecasts) {
