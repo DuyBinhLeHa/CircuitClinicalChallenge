@@ -66,7 +66,7 @@ namespace CircuitClinical_Backend.Controllers
             return NoContent();
         }
 
-        [HttpPut(Name = "UpdateStudyField/{id:length(24)}")]
+        [HttpPut(Name = "{id:length(24)}")]
         public async Task<IActionResult> Update(string id, StudyField updateStudyField)
         {
             var studyField = await _dBStudyFieldServices.GetAsync(id);

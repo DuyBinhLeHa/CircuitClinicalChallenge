@@ -5,7 +5,8 @@ import StudyFieldForm from './StudyFieldForm';
 class StudyFieldModal extends Component {
 
     state = {
-        modal: false
+        modal: false,
+        isEdit: false
     }
 
     toggle = () => {
@@ -36,7 +37,8 @@ class StudyFieldModal extends Component {
                         addStudyFieldToState={this.props.addStudyFieldToState}
                         updateStudyFieldIntoState={this.props.updateStudyFieldIntoState}
                         toggle={this.toggle}
-                        studyfield={this.props.studyfield} />
+                        studyfield={this.props.studyfield} 
+                        isEdit={this.props.isEdit} />
                 </ModalBody>
             </Modal>
         </Fragment>;

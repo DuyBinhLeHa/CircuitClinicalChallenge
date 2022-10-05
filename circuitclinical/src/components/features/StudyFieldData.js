@@ -51,7 +51,8 @@ class StudyFieldData extends Component {
                                     <StudyFieldModal
                                         isNew={false}
                                         studyfield={item}
-                                        updateStudyFieldIntoState={this.props.updateState} />
+                                        updateStudyFieldIntoState={this.props.updateState}
+                                        isEdit={true} />
                                     &nbsp;&nbsp;&nbsp;
                                     <Button color="danger" onClick={() => this.deleteItem(item.id)}>Delete</Button>
                                 </div>

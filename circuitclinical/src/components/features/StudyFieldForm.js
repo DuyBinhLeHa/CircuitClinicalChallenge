@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
 
-import { USERS_API_URL } from '../../constants';
+import { USERS_API_URL1 } from '../../constants';
 
 class StudyFieldForm extends Component {
 
     state = {
+        id: 0,
         rank: 0,
-        nctid: '',
-        leadsponsorname: '',
-        brieftitle: '',
-        condition: ''
+        nctId: '',
+        leadSponsorName: '',
+        briefTitle: '',
+        condition: '',
+        isEdit: false
     }
 
     componentDidMount() {
         if (this.props.studyfield) {
-            const { rank, nctid, leadsponsorname, brieftitle, condition } = this.props.studyfield
-            this.setState({ rank, nctid, leadsponsorname, brieftitle, condition });
+            const { id, rank, nctId, leadSponsorName, briefTitle, condition } = this.props.studyfield
+            this.setState({ id, rank, nctId, leadSponsorName, briefTitle, condition });
         }
     }
 
@@ -26,15 +28,15 @@ class StudyFieldForm extends Component {
 
     submitNew = e => {
         e.preventDefault();
-        fetch(`${USERS_API_URL}/Insert`, {
+        fetch(`${USERS_API_URL1}Insert`, {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                nctid: this.state.nctid,
-                leadsponsorname: this.state.leadsponsorname,
-                brieftitle: this.state.brieftitle,
+                nctId: this.state.nctId,
+                leadSponsorName: this.state.leadSponsorName,
+                briefTitle: this.state.briefTitle,
                 condition: this.state.condition
             })
         }).then(res => res.json()).then(data => {
@@ -46,15 +48,15 @@ class StudyFieldForm extends Component {
 
     submitEdit = e => {
         e.preventDefault();
-        fetch(`${USERS_API_URL}/Update/${this.state.id}`, {
+        fetch(`${USERS_API_URL1}Update/${this.state.id}`, {
             method: 'put',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                name: this.state.nctid,
-                document: this.state.leadsponsorname,
-                email: this.state.brieftitle,
+                name: this.state.nctId,
+                document: this.state.leadSponsorName,
+                email: this.state.briefTitle,
                 phone: this.state.condition
             })
         }).then(() => {
@@ -68,21 +70,21 @@ class StudyFieldForm extends Component {
         return <Form onSubmit={this.props.studyfield ? this.submitEdit : this.submitNew}>
             <FormGroup>
                 <Label for="name">NCT Id:</Label>
-                <Input type="text" name="nctid" onChange={this.onChange} value={this.state.nctid === null ? '' : this.state.nctid} />
+                <Input type="text" name="nctId" onChange={this.onChange} value={this.state.nctId === null ? '' : this.state.nctId} />
             </FormGroup>
             <FormGroup>
                 <Label for="name">Lead Sponsor Name:</Label>
-                <Input type="text" name="leadsponsorname" onChange={this.onChange} value={this.state.leadsponsorname === null ? '' : this.state.leadsponsorname} />
+                <Input type="text" name="leadSponsorName" onChange={this.onChange} value={this.state.leadSponsorName === null ? '' : this.state.leadSponsorName} />
             </FormGroup>
             <FormGroup>
                 <Label for="document">Brief Title:</Label>
-                <Input type="text" name="brieftitle" onChange={this.onChange} value={this.state.brieftitle === null ? '' : this.state.brieftitle} />
+                <Input type="text" name="briefTitle" onChange={this.onChange} value={this.state.briefTitle === null ? '' : this.state.briefTitle} />
             </FormGroup>
             <FormGroup>
                 <Label for="document">Condition:</Label>
                 <Input type="text" name="condition" onChange={this.onChange} value={this.state.condition === null ? '' : this.state.condition} />
             </FormGroup>
-            <Button>Create</Button>
+            <Button>{this.props.isEdit ? 'Edit' : 'Create'}</Button>
         </Form>;
     }
 }

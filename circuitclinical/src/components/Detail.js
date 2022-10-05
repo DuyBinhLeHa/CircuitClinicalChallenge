@@ -18,7 +18,6 @@ class Detail extends Component {
     async getItems() {
         const response = await fetch(`${API_URL}/StudyField/GetAll`);
         const data = await response.json();
-        console.log(data);
         this.setState({ items: data });
     }
 
@@ -41,7 +40,7 @@ class Detail extends Component {
         return <Container style={{ paddingTop: "100px" }}>
             <Row>
                 <Col>
-                    <h3>My First React + ASP.NET CRUD React</h3>
+                    <h3>ASP.NET CRUD React</h3>
                 </Col>
             </Row>
             <Row>
@@ -54,7 +53,7 @@ class Detail extends Component {
             </Row>
             <Row>
                 <Col>
-                    <StudyFieldModal isNew={true} addUserToState={this.addUserToState} />
+                    <StudyFieldModal isNew={true} addUserToState={this.addUserToState} isEdit={false} />
                 </Col>
             </Row>
         </Container>;
